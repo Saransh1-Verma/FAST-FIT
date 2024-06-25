@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <title>About | FitFast-"Fitness Helper" </title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link rel="icon" href="logo.jpg" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+
+    /* nav */
+    * {
+        font-family: "Maison Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    background: white;
+  }
+  #nav {
+    padding-top: 11px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-around;
+    height: 90px;
+    align-items: center;
+    position: relative;
+    
+  }
+  #nav-mega > li {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    color: #212432;
+  }
+  
+  #nav-mega > li:hover {
+    border-bottom: 4px solid #4296cb;
+    height: 71px;
+  }
+  
+  #nav-mega > li > span {
+    color: #4296cb;
+  }
+  
+  #logo {
+    width: 15%;
+  }
+  #logo > img {
+    width: 100%;
+    height: 80px;
+    object-fit: scale-down;
+  }
+  #nav-mega {
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu-down {
+    position: absolute;
+    width: 100%;
+    background-color: #32374d;
+    right: 0;
+    top: 90px;
+    height: 150px;
+  
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-down > div {
+    width: 12%;
+    margin: auto 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+  }
+  
+  .menu-down > div:hover {
+    background-color: #212432;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .menu-down > div > a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-down > div p {
+    font-size: 0.8vw;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 5px;
+  }
+  
+  .menu-down > div span {
+    font-size: 60px;
+    color: white;
+  }
+  
+  #nav-mega > li:hover .menu-down {
+    display: flex;
+  }
+  
+  #profile {
+    width: 15%;
+    position: relative;
+  }
+  
+  #profile > li > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+  }
+  #profile > li > div:nth-child(2) * {
+    color: white;
+    padding: 10px;
+    margin: 10px 0px;
+  }
+  #profile > li > div:nth-child(2) {
+    height: 350px;
+    width: 250px;
+  }
+  
+  #menu-util {
+    width: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
+  }
+  #userAvatar > span {
+    font-size: 50px;
+  }
+  
+  .first {
+    display: flex;
+  }
+  
+  .btn {
+    width: 150px;
+    background-color: black;
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn:hover{
+    cursor: pointer;
+  }
+  
+  .menu-down-profile {
+    position: absolute;
+    width: 100%;
+    background-color: #212432;
+    display: none;
+    padding: 10px;
+  }
+  #profile > li > div:nth-child(1) {
+    cursor: pointer;
+    justify-content: center;
+  }
+  
+  #profile > li:hover .menu-down-profile {
+    display: block;
+    right: 0px;
+  }
+  #hamburger > span {
+    font-size: 45px;
+  }
+  #hamburger {
+    display: none;
+    width: 20%;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    #hamburger {
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+      align-items: center;
+    }
+    #hamburger > li {
+      height: 200px;
+      display: flex;
+      align-items: center;
+    }
+    #hamburger > li > span {
+      font-size: 40px;
+      cursor: pointer;
+    }
+    #hamburger > li > div {
+      position: fixed;
+      bottom: 0;
+      min-height: 100px;
+      overflow-y: scroll;
+      top: 97px;
+      background-color: #212432;
+      padding: 0px 10px;
+  
+      transition: 0.5s;
+      right: -70%;
+      cursor: pointer;
+    }
+  
+    #hamburger > li > div li {
+      text-transform: uppercase;
+      padding: 5px;
+      font-size: 20px;
+    }
+    #hamburger > li > div > ul {
+      border-bottom: 1px solid #32374d;
+      padding: 10px 10px;
+    }
+  
+    #hamburger > li > div > ul li a {
+      color: #32374d;
+    }
+    #hamburger > li > div > ul:nth-child(1) {
+      padding-top: 50px;
+    }
+  
+    #hamburger > li > div > ul > li:nth-child(1) > a {
+      color: white;
+    }
+    #hamburger > li > div > ul:nth-child(1) > li > a {
+      color: #4296cb;
+    }
+    #profile {
+      width: 70%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    #logo {
+      width: 40%;
+    }
+    /* #hamburger > li:hover > div {
+      
+      right: 0px;
+      cursor: pointer;
+    } */
+    .menu-down-profile {
+      width: 60%;
+    }
+    #nav-mega {
+      display: none;
+    }
+    #menu-util {
+      display: none;
+    }
+    /* nav {
+      align-items: flex-start;
+     
+    } */
+  }
+        /* ------------- */
+
+        .img{
+            margin-top: 10px;
+        }
+
+
+        .imgText{
+            font-family:  "Maison Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 26px;
+            color:  rgb(145, 238, 218);
+            position: absolute;
+            top: 300px;
+            left: 200px;
+
+        }
+        .imgText>p:nth-child(2){
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 57.6px;
+            color:  white;
+        }
+
+        .centerText{
+            text-align: center;
+            width: 50%;
+            margin: auto;
+            margin-top: 125px;
+            margin-bottom: 125px;
+            color: rgb(78, 82, 98);
+            
+        }
+        .centerText>p:nth-child(1){
+            color: black;
+            font-size: 44px;
+            font-weight: 400;
+            line-height: 57.6px;
+        }
+        
+        /* -----------------footer--------------- */
+        .footer{
+            background-color: rgb(33, 36, 50);
+            color: rgb(123, 127, 146);
+            margin-top: 100px;
+            padding-bottom: 100px;
+            font-family:  "Maison Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+        .footer h7{
+           color: rgb(227, 235, 238);
+           display: block;
+           margin-bottom: 10px;
+           font-weight: 600;
+        }
+
+        .footer>div{
+            width: 70%;
+            padding-top: 60px;
+            margin: auto;
+         
+            display: flex;
+            justify-content: space-around;
+        }
+       
+        .footerlogo{
+            width: 40%;
+           
+        }
+        .footerbottom{
+            font-size: 12px;
+            background-color: rgb(33, 36, 50);
+            color: rgb(123, 127, 146);
+            margin-top: -20px;
+           
+        }
+        .footerbottom>div{
+            height: 50px;
+            width: 70%;
+            margin: auto;
+        }
+        .footerbottom>div>div{
+            margin-top: 10px;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+       
+        hr{
+           width: 70%;
+           margin: auto;
+           background-color: #eee;
+            border: 0 none;
+            color: #eee;
+            height: .15px;
+        }
+      
+        .bottom{
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container-medium_large{
+            background-color: rgb(34, 37, 51);
+            color: white;
+        }
+        .container-medium_large>div{
+            width: 60%;
+            margin: auto;
+            text-align: center;
+            padding: 50px;
+        }
+        .container-medium_large>div>p:nth-child(1){
+            font-size: 40px;
+            font-weight: 200;
+            line-height: 57px;
+        }
+        .container-medium_large>div>div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .container-medium_large>div>div>div{
+            width: 30%;
+        }
+        .panel-image-grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .images{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    
+<!------------------- navigation bar part ------------>
+  <!-- Nav Bar -->
+
+  <nav>
+    <div id="nav">
+
+        <div id="logo">
+            <a href="index.html"><img src="../workout-videos/fitnesSHELPER.png" alt=""></a>   
+        </div>
+        <div id="nav-mega">
+            <li><a href="WORKOUT.HTML">WORKOUTS</a><span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+                <div class="menu-down">
+                    <div>
+                        <a href="./workout-videos/Workout-Videos.html">
+
+                            <span class="material-symbols-outlined">
+                                sports_gymnastics
+                            </span>
+                            <p>WORKOUT VIDEOS</p>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./workout-videos/custom_Workout.html">
+                            <span class="material-symbols-outlined">
+                                functions
+                            </span>
+                            <p>CUSTOM WORKOUTS</p>
+
+                        </a>
+                    </div>
+
+
+                </div>
+
+            </li>
+            <li><a href="./Vivek's page/programs.html">PROGRAMS</a><span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+                <div class="menu-down">
+                    <div>
+                        <a href="./Vivek's page/programs.html">
+
+                            <span class="material-symbols-outlined">
+                                description
+                            </span>
+                            <p>WORKOUT PROGRAMS</p>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./Vivek's page/meal.html">
+                            <span class="material-symbols-outlined">
+                                description
+                            </span>
+                            <p>MEAL PLANS</p>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./Vivek's page/pilot.html">
+                            <span class="material-symbols-outlined">
+                                description
+                            </span>
+                            <p>PILOT PROGRAMS</p>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./Vivek's page/routine.html">
+                            <span class="material-symbols-outlined">
+                                description
+                            </span>
+                            <p>ROUTINES</p>
+
+                        </a>
+                    </div>
+
+
+                </div>
+
+            </li>
+            <li><a href="HealthLiving.html">HEALTHY LIVING</a><span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+                <div class="menu-down">
+                    <div>
+                        <a href="ExpertArticles.html">
+
+                            <span class="material-symbols-outlined">
+                                sports_gymnastics
+                            </span>
+                            <p>EXPERT ARTICLES</p>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="Recipes.html">
+                            <span class="material-symbols-outlined">
+                                functions
+                            </span>
+                            <p>HEALTHY RECIPES</p>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="wellness.html">
+
+                            <span class="material-symbols-outlined">
+                                sports_gymnastics
+                            </span>
+                            <p>WELLNESS VIDEOS</p>
+
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </li>
+            <li><a href="./community/community.html">COMMUNITY</a><span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+                <div class="menu-down">
+                    <div>
+                        <a href="./community/blog.html">
+
+                            <span class="material-symbols-outlined">
+                                sports_gymnastics
+                            </span>
+                            <p>BLOG</p>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./community/whatsNew.html">
+                            <span class="material-symbols-outlined">
+                                functions
+                            </span>
+                            <p>WHAT'S NEW</p>
+
+                        </a>
+                    </div>
+
+
+                </div>
+            </li>
+            <li><a href="About.html">ABOUT</a><span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+                <div class="menu-down">
+                    <div>
+                        <a href="Careers.html">
+
+                            <span class="material-symbols-outlined">
+                                sports_gymnastics
+                            </span>
+                            <p>CAREERS</p>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="About.html">
+                            <span class="material-symbols-outlined">
+                                functions
+                            </span>
+                            <p>TUTORIALS</p>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a href="About.html">
+                            <span class="material-symbols-outlined">
+                                functions
+                            </span>
+                            <p>OUR TEAM</p>
+
+                        </a>
+                    </div>
+
+
+                </div>
+            </li>
+            <li><a href="Store.html">STORE</a> </li>
+            <li><a href="Membership.html">MEMBERSHIP</a> </li>
+
+        </div>
+        <div id="profile">
+            <li>
+
+                <div>
+                    <div id="userAvatar">
+                        <span class="material-symbols-outlined">
+                            account_circle
+                        </span>
+                    </div>
+                    <span class="material-symbols-outlined">
+                        arrow_drop_down
+                    </span>
+
+                </div>
+                <div class="menu-down-profile">
+                    <h1>JOIN FOR FREE!</h1>
+                    <p>
+                        Join for free and start building and tracking your workouts, get support from other Fitness
+                        Blender members and more!
+
+                    </p>
+                    <div id="join" class="btn" style="background-color: #4296cb;"><a href="./Vivek's page/usersingup.html">JOIN</a> </div>
+                    <div id="sign-in" style="color: #212432; background-color: white;" class="btn"><a href="./Vivek's page/userlogin.js">Sign In</a></div>
+                </div>
+
+
+            </li>
+        </div>
+
+
+        <div id="hamburger">
+
+            <li>
+
+
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+                <div class="menu-down-media">
+                    <ul>
+                        <li><a href="Membership.html">membership</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/WORKOUT.HTML">Workouts</a></li>
+                        <li><a href="/workout-videos/Workout-Videos.html">workout videos</a></li>
+                        <li><a href="/workout-videos/custom_Workout.html">custom workouts</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="./Vivek's page/programs.html">Programs</a></li>
+                        <li><a href="./Vivek's page/programs.html">workout programs</a></li>
+                        <li><a href="./Vivek's page/meal.html">meal plans</a></li>
+                        <li><a href="./Vivek's page/pilot.html">pilot programs</a></li>
+                        <li><a href="./Vivek's page/routine.html">routines</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="HealthLiving.html">healthy living</a></li>
+                        <li><a href="ExpertArticles.html">Articles</a></li>
+                        <li><a href="Recipes.html">Healthy recipes</a></li>
+                        <li><a href="wellness.html">wellness videos</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="./community/community.html">community</a></li>
+                        <li><a href="./community/blog.html">blog</a></li>
+                        <li><a href="./community/whatsNew.html">what's new</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="About.html">about</a></li>
+                        <li><a href="Careers.html">careers</a></li>
+                        <li><a href="About.html">tutorials</a></li>
+                        <li><a href="About.html">our team</a></li>
+
+                    </ul>
+                    <ul>
+                        <li><a href="Store.html">store</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+        </div>
+
+        <div id="menu-util">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            <a href="./Vivek's page/cart.html"><span class="material-symbols-outlined">
+                shopping_bag
+            </span></a>
+        </div>
+    </div>
+
+</nav> 
+<!-- ----------------container----------------------- -->
+
+    <div class="container"> 
+        <img class="img" width="100%" src="https://d18zdz9g6n5za7.cloudfront.net/about/masthead-xs@2X.jpg" alt="">
+        
+        <div class="imgText">
+           
+            <p>ABOUT FITNESS BLENDER</p>
+            <p>Our goal is to make health and <br> fitness attainable, affordable and <br> approachable.</p>
+        </div>
+
+        <div class="centerText">
+            <p>Created to help you live a better, happier, healthier life.</p>
+            <p>We believe fitness should be accessible to everyone, everywhere, regardless of income level or access to a gym. 
+                That's why we offer hundreds of free, full-length workout videos, the most affordable and effective workout programs on the web, meal plans, 
+                and helpful health, nutrition and fitness information.</p>
+        </div>
+
+        <div>
+            <img  width="100%"  src="https://d18zdz9g6n5za7.cloudfront.net/about/video.jpg" alt="">
+        </div>
+
+        <div class="container-medium_large">
+            <div>
+             <p>We believe in unbiased, gimmick-free, research-backed information</p>
+            <p>The only thing we endorse is eating unprocessed, whole foods, and working out for a strong, healthy body. As a business, we believe good things happen when you put people before profit.</p>
+        
+            <div >
+                <div> <p class="powered"></p>
+                    <i class="icon -about-smiley" aria-hidden="true"></i>
+                    <h6 class="caps-half demi">Powered by You</h6>
+                    <p class="no-pad -tight">Fitness Blender has reached tens of millions around the globe, all from word of
+                      mouth; happy viewers sharing our content with friends and family.</p></div>
+                 
+                     
+                 <div><p class="programs">
+                    <i class="icon -about-programs" aria-hidden="true"></i>
+                    <h6 class="caps-half demi">Programs that Work</h6>
+                    <p class="no-pad -tight">Our workout plans use our online fitness calendar to provide detailed, day-by-day
+                      plans, creating incredible, sustainable results.</p>
+                  </p></div>
+                  
+
+                  <div><p class="workouts"></p>
+                    <i class="icon -about-workouts" aria-hidden="true"></i>
+                    <h6 class="caps-half demi">500+ Free Workouts</h6>
+                    <p class="no-pad -tight">Over 500 free workouts range from 10-85 minutes long, from beginner level to elite
+                      athlete, from HIIT to Pilates, and strength training to bodyweight.</p>
+                    </div>
+                  
+                 </div>
+           
+            </div>
+            
+        </div >
+
+        <div class="panel-image-grid">
+            <div>
+                <img  width="100%"   src="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-01.jpg"
+                      srcset="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-01.jpg 1x, https://d18zdz9g6n5za7.cloudfront.net/about/gallery-01@2X.jpg 2x"
+                      alt="">
+            </div>
+            <div><img  width="100%"   src="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-02.jpg"
+                      srcset="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-02.jpg 1x, https://d18zdz9g6n5za7.cloudfront.net/about/gallery-02@2X.jpg 2x"
+                      alt=""></div>
+            <div><img  width="100%"   src="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-03.jpg"
+                      srcset="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-03.jpg 1x, https://d18zdz9g6n5za7.cloudfront.net/about/gallery-03@2X.jpg 2x"
+                      alt=""></div>
+            <div><img  width="100%"   src="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-04.jpg"
+                      srcset="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-04.jpg 1x, https://d18zdz9g6n5za7.cloudfront.net/about/gallery-04@2X.jpg 2x"
+                      alt="" class="anchor-top"></div>
+            <div><img  width="100%"   src="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-05.jpg"
+                      srcset="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-05.jpg 1x, https://d18zdz9g6n5za7.cloudfront.net/about/gallery-05@2X.jpg 2x"
+                      alt="" class="anchor-top"></div>
+            <div><img  width="100%"   src="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-06.jpg"
+                      srcset="https://d18zdz9g6n5za7.cloudfront.net/about/gallery-06.jpg 1x, https://d18zdz9g6n5za7.cloudfront.net/about/gallery-06@2X.jpg 2x"
+                      alt=""></div>
+          </div>
+
+          <div class="centerText">
+            <p>A little bit about who we are and
+                how it all got started</p>
+            <p>Fitness Blender was created by just two people; a husband and wife team of personal trainers who thought
+                fitness should be accessible to everyone, regardless of their income. Both Kelli and Daniel felt like there was a
+                lack of reliable health and fitness information on the web, and too many people in the industry were more
+                focused on monetary gain or appearance than they were on good health.</p>
+        </div>
+        
+        <div class="images">
+            <img src="https://d18zdz9g6n5za7.cloudfront.net/about/bio-daniel.jpg" alt="">
+            <img src="https://d18zdz9g6n5za7.cloudfront.net/about/bio-kelli.jpg" alt="">
+        
+        </div>
+    </div>
+
+
+
+    
+<!------------------- footer part --------------------------->
+    <div class="footer">
+        <div>
+            <div class="footerlogo">
+                <img width="50%" src="https://i.postimg.cc/y8BXKHqY/fitnes-SHELPER-1.png" alt="">
+                <p>WORKOUT COMPLETE™</p>
+            </div>
+    
+            <div>
+                <h7>WORKOUTS</h7>   
+                <p> WORKOUT VIDEOS</p> 
+                <p>CUSTOM WORKOUTS</p>  
+                <h7> PROGRAMS</h7>  
+                <p>WORKOUT PROGRAMS</p>  
+                <p>MEAL PLANS</p>   
+                <p>PILOT PROGRAMS</p>   
+                <p> ROUTINES</p>   
+            </div>
+    
+            <div>
+                <h7>HEALTHY LIVING</h7>
+                <p>FITNESS</p>
+                <p>HEALTH</p>
+                <p>NUTRITION</p>
+                <p>HEALTHY RECIPES</p>
+                <p>EXPERTS</p>
+            </div>
+    
+            <div>
+                <h7>ABOUT</h7>
+                <p>CAREERS</p> 
+                <p>TUTORIALS</p>
+                <p>OUR TEAM</p>
+                <p>B2B OPTIONS</p> 
+            </div>
+    
+            <div>
+                <h7>MEMBERSHIP</h7>
+                <h7>FB PLUS</h7>
+                <h7>COMMUNITY</h7>
+                <h7>BLOG</h7>
+                <h7>CONTACT US</h7>
+                <h7>FAQ</h7>
+                <h7>STORE</h7>
+            </div>
+            
+        </div>
+       
+    </div>
+    <div class="footerbottom"> 
+        <hr>
+        <div>
+          <div>
+            <div>
+                Copyright © 2022 Fitness Blender. All rights reserved. Terms of Use Privacy Policy
+            </div>
+       
+            <div class="bottom"> 
+                <a href="https://www.youtube.com/user/FitnessBlender" class="icon youtube">
+                    <span><i style="font-size:24px"  class="fab fa-youtube"></i></span>
+                </a>
+                <a href="https://www.pinterest.com/FitnessBlender/" class="icon github">
+                    <span><i style="font-size:24px"  class="fab fa-github"></i></span>
+                </a>
+                <a href="https://www.facebook.com/fitnessblender/" class="icon facebook">
+                <span><i style="font-size:24px" class="fab fa-facebook-f"></i></span>
+                </a>
+                
+                <a href="https://www.instagram.com/fitnessblender/" class="icon instagram">
+                    <span><i  style="font-size:24px" class="fab fa-instagram"></i></span>
+                </a>
+                
+                <a href="https://twitter.com/FitnessBlender" class="icon twitter">
+                    <span><i style="font-size:24px"  style="font-size:24px"  class="fab fa-twitter"></i></span>
+                </a>
+                
+            </div> 
+        </div>
+        
+    </div>
+
+
+</body>
+</html>
+
+<script>
+       let hamburger = document.querySelector('#hamburger>li>span')
+
+let hamburgerDown = document.querySelector('#hamburger>li>div')
+let hamcount = 0
+hamburger.addEventListener('click', () => {
+    if (hamcount == 0) {
+
+        hamburger.classList.add = 'material-symbols-sharp'
+        hamburger.classList.remove = 'material-symbols-outlined'
+        hamburger.textContent = 'close'
+        hamburgerDown.style.right = '0px'
+        hamcount++
+    } else {
+
+
+        hamburger.textContent = 'menu'
+        hamburger.classList.add = 'material-symbols-outlined'
+        hamburger.classList.remove = 'material-symbols-sharp'
+        hamcount = 0
+        hamburgerDown.style.right = '-70%'
+    }
+
+})
+    
+    </script>
